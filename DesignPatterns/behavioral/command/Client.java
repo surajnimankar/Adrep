@@ -1,4 +1,4 @@
-package designPatterns.behavioral.command;
+package behavioral.command;
 
 public class Client {
 
