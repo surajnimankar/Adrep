@@ -1,5 +1,4 @@
-
-public class Ass1 {
+public class StaticMethodCall {
 	
 	public static String foo(){
 		System.out.println("Test foo called");
@@ -10,11 +9,11 @@ public class Ass1 {
 		
 		try {
 			System.out.println("Hello World...!");
-			Ass1 obj = null;
+			StaticMethodCall obj = null;
 			System.out.println(obj.foo());
 		}
 		finally {
-			
+			System.out.println("In Finally Block...");
 		}
 	}
 }
