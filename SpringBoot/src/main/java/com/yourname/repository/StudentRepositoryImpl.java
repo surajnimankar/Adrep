@@ -1,4 +1,4 @@
-package com.yourname.Dao;
+package com.yourname.repository;
 
 import com.yourname.entity.Student;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-@Qualifier("StudentDaoImpl")
-public class StudentDaoImpl implements StudentDao {
+@Qualifier("StudentRepositoryImpl")
+public class StudentRepositoryImpl implements StudentRepository {
 
     private static Map<Integer, Student> students;
 

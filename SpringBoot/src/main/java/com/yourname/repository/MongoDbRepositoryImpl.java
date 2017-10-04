@@ -1,4 +1,4 @@
-package com.yourname.Dao;
+package com.yourname.repository;
 
 import com.yourname.entity.Student;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Repository
-@Qualifier("MongoDbImpl")
-public class MongoDbImpl implements StudentDao {
+@Qualifier("MongoDbRepositoryImpl")
+public class MongoDbRepositoryImpl implements StudentRepository {
     @Override
     public Collection<Student> getAllStudents() {
         return new ArrayList<Student>() {

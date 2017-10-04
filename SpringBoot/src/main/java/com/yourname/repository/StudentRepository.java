@@ -1,10 +1,10 @@
-package com.yourname.Dao;
+package com.yourname.repository;
 
 import com.yourname.entity.Student;
 
 import java.util.Collection;
 
-public interface StudentDao {
+public interface StudentRepository {
 
     Collection<Student> getAllStudents();
 

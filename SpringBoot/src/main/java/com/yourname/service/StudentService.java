@@ -1,6 +1,6 @@
 package com.yourname.service;
 
-import com.yourname.Dao.StudentDao;
+import com.yourname.repository.StudentRepository;
 import com.yourname.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,27 +12,27 @@ import java.util.Collection;
 public class StudentService {
 
     @Autowired
-    //@Qualifier("StudentDaoImpl")
-    @Qualifier("MongoDbImpl")
-    private StudentDao studentDao;
+    //@Qualifier("StudentRepositoryImpl")
+    @Qualifier("MongoDbRepositoryImpl")
+    private StudentRepository studentRepository;
 
     public Collection<Student> getAllStudents() {
-        return studentDao.getAllStudents();
+        return studentRepository.getAllStudents();
     }
 
     public Student getStudentById(int id) {
-        return studentDao.getStudentById(id);
+        return studentRepository.getStudentById(id);
     }
 
     public void deleteStudentById(int id) {
-        studentDao.deleteStudentById(id);
+        studentRepository.deleteStudentById(id);
     }
 
     public void updateStudent(Student student) {
-        studentDao.updateStudent(student);
+        studentRepository.updateStudent(student);
     }
 
     public void insertStudent(Student student) {
-        studentDao.insertStudent(student);
+        studentRepository.insertStudent(student);
     }
 }
