@@ -11,8 +11,11 @@ class Cake {
 	private final double milk; // cup
 	private final int cherry;
 
+	/**
+	 * @param builder
+	 */
 	// private constructor to enforce object creation through builder
-	Cake(CakeBuilder builder) {
+	private Cake(CakeBuilder builder) {
 		this.sugar = builder.sugar;
 		this.butter = builder.butter;
 		this.eggs = builder.eggs;
